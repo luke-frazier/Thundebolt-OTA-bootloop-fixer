@@ -1,0 +1,33 @@
+# # #
+# This program is free software. It comes without any warranty, to
+# the extent permitted by applicable law. You can redistribute it
+# and/or modify it under the terms of the Do What The F*** You Want
+# To Public License, Version 2, as published by Sam Hocevar. See
+# http://sam.zoy.org/wtfpl/COPYING for more details.
+# # #
+ui_print(" ");
+ui_print("*******************************");
+ui_print(" _        _           __  ___  ");
+ui_print("| |      | |         /_ |/ _ \ ");
+ui_print("| |_ _ __| |_ ___ _ __| | | | |");
+ui_print("| __| '__| __/ _ \ '__| | | | |");
+ui_print("| |_| |  | ||  __/ |  | | |_| |");
+ui_print(" \__|_|   \__\___|_|  |_|\___/ ");
+ui_print("*******************************");
+ui_print(" ");
+mount("ext4", "EMMC", "/dev/block/mmcblk0p27", "/cache");
+mount("ext3", "EMMC", "/dev/block/mmcblk0p25", "/system");
+ui_print("1");
+delete("/system/app/DmClient.apk");
+ui_print("2");
+delete_recursive("/cache");
+ui_print("3");
+unmount("/system");
+unmount("/cache");
+ui_print("LET'S GO!");
+ui_print(" ");
+ui_print("Phone should reboot and be fully working,");
+ui_print("still rooted, and OTAs blocked.");
+ui_print("First boot may be long.");
+ui_print(" ");
+ui_print(" ");
